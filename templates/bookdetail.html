@@ -1,0 +1,13 @@
+<div id="bd">
+    <p>Name of the Book : {{v2.detail.name}}</p>
+    <p><u>FOLLOWING ARE THE AUTHORS</u></p>
+    <p>Number of Authors               : {{v2.detail.authors.length}}</p>
+    <p ng-repeat="author in v2.detail.authors">{{$index + 1}}. {{author}}</p>
+    <p>Number of Pages                  : {{v2.detail.numberOfPages}}</p>
+    <p>Publisher                  : {{v2.detail.publisher}}</p>
+    <p>Release Date              : {{v2.detail.released | date: ddMMyyyy}}</p>
+    <p>Number of characters               : {{v2.detail.characters.length}}</p>
+    <p ng-if="v2.detail.povCharacters[0] != '' && v2.detail.povCharacters.length > 0"><u>FOLLOWING ARE THE NAMES OF POV CHARACTERS</u></p>
+    <p ng-if="v2.detail.povCharacters[0] != '' && v2.detail.povCharacters.length > 0">POV Characters : {{v2.detail.povCharacters.length}}</p>
+    <p ng-if="v2.detail.povCharacters[0] != '' && v2.detail.povCharacters.length > 0" ng-repeat="pov in v2.detail.bookpovchar">{{$index+1}}. {{pov}}</p>
+</div>

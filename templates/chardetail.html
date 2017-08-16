@@ -1,0 +1,18 @@
+<div id="cd">
+<div id="cd">
+    <p>Name of the character : {{v2.detail.name}}</p>
+    <p>Gender                : {{v2.detail.gender}}</p>
+    <p ng-if="v2.detail.born">born                  : {{v2.detail.born}}</p>
+    <p ng-if="v2.detail.died">died                  : {{v2.detail.died}}</p>
+    <p ng-if="v2.detail.culture">culture               : {{v2.detail.culture}}</p>
+    <p  ng-if="v2.detail.titles.length > 0 && v2.detail.titles[0] != ''"><u>TITLES</u></p>
+    <p  ng-if="v2.detail.titles.length > 0 && v2.detail.titles[0] != ''" ng-repeat="title in v2.detail.titles">{{$index+1}}.               {{title}}</p>
+    <p ng-if="v2.detail.father">fater               : {{v2.detail.fatherName}}</p>
+    <p ng-if="v2.detail.mother">mother               : {{v2.detail.motherName}}</p>
+    <p ng-if="v2.detail.spouse">spouse               : {{v2.detail.spouseName}}</p>
+    <p ng-if="v2.detail.books.length > 0 && v2.detail.books[0] != ''"><u>BOOKS IN WHICH CHARACTER IS MENTIONED</u></p>
+    <p ng-if="v2.detail.books.length > 0 && v2.detail.books[0] != ''" ng-repeat="book in v2.detail.charbookNames"> {{$index + 1}}.                {{book}}</p>
+    <p ng-if="v2.detail.playedBy.length > 0 && v2.detail.playedBy[0] != ''"><u>PLAYED BY {{v2.detail.playedBy[0]}}</u></p>
+    <p ng-if="v2.detail.tvSeries.length > 0 && v2.detail.tvSeries[0] != ''" >in following GOT SEASONS</p>
+    <p ng-if="v2.detail.tvSeries.length > 0 && v2.detail.tvSeries[0] != ''" ng-repeat="tv in v2.detail.tvSeries">{{$index + 1}}. {{tv}}</p>
+</div>

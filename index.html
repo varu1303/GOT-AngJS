@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PROFILE">
+    <meta name="author" content="Varun">
+
+    <title>ASOIAF - WiKi</title>
+
+    <!---Importing Font ---->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- Bootstrap minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body ng-app="GOT">
+<!-- HEADER     -------->
+      <div class="container" id="head">
+          <div class="row">
+              <h1>A Song of Ice and Fire - WiKi</h1>
+          </div>
+      </div>
+<!-- Views go in here -->
+      <ng-view></ng-view>
+      
+<!-- Footer     -------->
+      <div id="tags">
+          <h2 id="foot">JOIN THE COMMUNITY</h2>
+          <a href="https://www.facebook.com/GameOfThrones/" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/GameOfThrones?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+          <a href="https://www.hotstar.com/subscribe/offers/game-of-thrones?ns_mchannel=search&ns_source=Google&ns_campaign=GOT2017-RX&ns_linkname=GOT-Brand-PM-Desktop-AG-GOT&ns_fee=0&utm_medium=search&utm_source=Google&utm_campaign=GOT2017-RX&utm_content=GOT-Brand-PM-Desktop&utm_term=GOT&gclid=Cj0KCQjwq7XMBRCDARIsAKVI5QbKAt755aiAC7V74E76LKSw3ZX-L37p0GnChTwaXwbumi6vWAeyjokaAhmxEALw_wcB" target="_blank"><i class="fa fa-television fa-2x" aria-hidden="true"></i></a>
+      </div>
+      
+<!----Imports   ----->
+    <!---Importing Icons ---->
+    <script src="https://use.fontawesome.com/7d3906fbc4.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Angular CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <!-- Angular route CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <!---Custom JS file ---->
+    <script src="angular/home.js"></script>
+    <!---Custom route JS file ---->
+    <script src="angular/route.js"></script>
+    <!---Custom service JS file ---->
+    <script src="angular/service.js"></script>
+    <!---Custom view JS file ---->
+    <script src="angular/view1.js"></script>
+    <!---Custom view JS file ---->
+    <script src="angular/view2.js"></script>
+  </body>
+</html>

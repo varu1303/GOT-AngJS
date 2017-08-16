@@ -1,0 +1,16 @@
+<div id="hd">
+    <p>{{v2.detail.name}}</p>
+    <p>Region : {{v2.detail.region}}</p>
+    <p ng-if="v2.detail.coatOfArms != ''">Coat of Arms : {{v2.detail.coatOfArms}}</p>
+    <p ng-if="v2.detail.titles.length > 0 && v2.detail.titles[0] != ''"><u>LIST OF TITLES</u></p>
+    <p ng-if="v2.detail.titles.length > 0 && v2.detail.titles[0] != ''">Has {{v2.detail.titles.length}} titles</p>
+    <p ng-repeat="title in v2.detail.titles" ng-if="v2.detail.titles.length > 0 && v2.detail.titles[0] != ''">{{$index+1}}. {{title}}</p>
+    <p ng-if="v2.detail.founded">Founded in {{v2.detail.founded}} by {{v2.detail.founderName}}</p>
+    <p ng-if="v2.detail.currentLord">Current Lord : {{v2.detail.currentLordName}}</p>
+    <p ng-if="v2.detail.seats.length > 0 && v2.detail.seats[0] != ''"><u>LIST OF SEATS</u></p>
+    <p ng-if="v2.detail.seats.length > 0 && v2.detail.seats[0] != ''">Has {{v2.detail.seats.length}} seats</p>
+    <p ng-repeat="seat in v2.detail.seats" ng-if="v2.detail.seats.length > 0 && v2.detail.seats[0] != ''"> {{$index +1}}. {{seat}}</p>
+    <p ng-if="v2.detail.swornMembers.length > 0 && v2.detail.swornMembers[0] != ''"><u>LIST OF SWORNED MEMBERS</u></p>
+    <p ng-if="v2.detail.swornMembers.length > 0 && v2.detail.swornMembers[0] != ''">Has {{v2.detail.swornMembers.length}} sworned members</p>
+    <p ng-if="v2.detail.swornMembers.length > 0 && v2.detail.swornMembers[0] != ''" ng-repeat="mem in v2.detail.swornMembersName"> {{$index + 1}}. {{mem}}</p>
+</div>

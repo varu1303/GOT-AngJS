@@ -1,0 +1,53 @@
+<div ng-controller="v1Ctrl as v1">
+    <div id="filter">
+        <h1>{{v1.t}}</h1>
+        <p>SORTED {{v1.order}} <button class="btn btn-info" ng-click="v1.reverseOrder()">Click to toggle</button></p>
+        <hr>
+        <p> SEARCH <br>
+            <label>By Book/Character/House's Name <input ng-model="search.name"></label><br>
+            <br>
+        </p>
+        <hr>
+        <div id="MF" ng-if="v1.mf">
+            <p>Select what to Show <br><label>Books <input type="checkbox" ng-model="v1.showbook"></label> <br><label>Houses <input type="checkbox" ng-model="v1.showhouse"></label> <br><label>Characters <input type="checkbox" ng-model="v1.showchar"></label></p>
+            <hr>
+            <p>
+                SELECT FILTER <br>
+                <label>
+                    <input type="radio" ng-model="v1.wantregauth" value="region" ng-change="v1.newValue('applicable on REGIONS OF HOUSES','r')">
+                    REGION OF HOUSE
+                </label><br>
+                <label>
+                    <input type="radio" ng-model="v1.wantregauth" value="author"  ng-change="v1.newValue('applicable on AUTHORS OF BOOKS','a')">
+                    AUTHOR OF BOOK
+                </label><br>
+                <label>Only {{v1.des}} <input ng-model="v1.searchregaut"></label><br>
+            </p>  
+            <hr>
+            <p>By Gender of Character <br>
+                <label>
+                    <input type="radio" ng-model="v1.searchgender" value="">
+                    BOTH
+                </label><br>
+                <label>
+                    <input type="radio" ng-model="v1.searchgender" value="Male">
+                    MALE
+                </label><br>
+                <label>
+                    <input type="radio" ng-model="v1.searchgender" value="Female">
+                    FEMALE
+                </label><br>
+            </p>
+            <hr>
+        </div>
+        <p><button class="btn btn-info" ng-click="v1.moreFil(v1.mf)">CLICK FOR {{v1.mftext}}</button></p>
+        
+
+        
+    </div>
+    <div ng-repeat="entry in v1.BCHarray | filter: search | searchbyRegaut: v1.searchregaut: v1.f | orderBy:'name':v1.reverse">
+        <a href="#!view2/{{entry.dirtype}}/{{entry.urlid}}"><book-card ng-if="entry.dirtype == 'B' && v1.showbook == true"></book-card></a>
+        <a href="#!view2/{{entry.dirtype}}/{{entry.urlid}}"><char-card ng-if="entry.dirtype == 'C' && entry.name && v1.showchar == true && (entry.gender == v1.searchgender || v1.searchgender == '') "></char-card></a>
+        <a href="#!view2/{{entry.dirtype}}/{{entry.urlid}}"><house-card ng-if="entry.dirtype == 'H' && v1.showhouse == true"></house-card></a>
+    </div>
+</div>
